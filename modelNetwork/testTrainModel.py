@@ -684,6 +684,8 @@ def test_pretrained(isNIH = False):
 
 # input processor as dataManager class(impl by me)
 
+train_SPHash(inputType="Cropped", bitSize=32, num_epochs=10)
+
 '''
 train_SPHash(inputType="Cropped", bitSize=32, num_epochs=10)
 train_SPHash(inputType="Activated", bitSize=32, num_epochs=10)
