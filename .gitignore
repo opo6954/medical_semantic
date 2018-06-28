@@ -1,4 +1,9 @@
-largeData/cifar10
-largeData/data
-largeData/model
+largeData/cifar10/
+largeData/data/
+largeData/model/
+largeData/modelAlexnet/
+.idea/
+*.pyc
+
+
 
