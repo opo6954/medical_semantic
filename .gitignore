@@ -2,6 +2,7 @@ largeData/cifar10/
 largeData/data/
 largeData/model/
 largeData/modelAlexnet/
+largeData/data_png
 .idea/
 *.pyc
 

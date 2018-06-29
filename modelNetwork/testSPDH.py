@@ -34,7 +34,8 @@ def filePath2Npy(filePath=''):
 
 
 # type of label file:
-# ../wholeData_bbox/activated/021000069_01Nodule_0.png, 0
+
+
 def extractSPDH(modelPath='', labelPath='', isTrain = True, additionalPrefix = '', outputParentPath=''):
 
     num_classes = 6
@@ -309,26 +310,24 @@ def testAllTrainedModelShell():
 def testAllTrainedModel(inputMode, modelPath, outputPath):
 
     if(inputMode == 'Origin'):
-        labelFilePathSearch = '../exp_jh/origin_search.label'
-        labelFilePathQuery = '../exp_jh/origin_query.label'
+        labelFilePathSearch = '../largeData/data/exp_jh/origin_search.label'
+        labelFilePathQuery = '../largeData/data/exp_jh/origin_query.label'
     elif(inputMode == 'Cropped'):
-        labelFilePathSearch = '../exp_jh/bbox_search.label'
-        labelFilePathQuery = '../exp_jh/bbox_query.label'
+        labelFilePathSearch = '../largeData/data/exp_jh/bbox_search.label'
+        labelFilePathQuery = '../largeData/data/exp_jh/bbox_query.label'
     elif(inputMode == 'Activated'):
-        labelFilePathSearch = '../exp_jh/activated_search.label'
-        labelFilePathQuery = '../exp_jh/activated_query.label'
+        labelFilePathSearch = '.../largeData/data/exp_jh/activated_search.label'
+        labelFilePathQuery = '../largeData/data/exp_jh/activated_query.label'
     else:
         print('wrong with input mode...')
         return
-
-    print('extract for train...')
-    extractSPDH(modelPath=modelPath, labelPath=labelFilePathSearch, isTrain=True, additionalPrefix='JH', outputParentPath=outputPath)
 
     print('extract for test...')
     extractSPDH(modelPath=modelPath, labelPath=labelFilePathQuery, isTrain=False, additionalPrefix='JH', outputParentPath=outputPath)
 
 
-testAllTrainedModelShell()
+# inputMode:  'Activated', 'Cropped', 'Origin'
+testAllTrainedModel(inputMode='Activated', modelPath='../largeData/model/modelTrainedPath/JH_SPDHActivated_16_wSM_1.0_wApp_1.0_wFire_1.0model_epoch26.ckpt', outputPath='../bitStore')
 
 
 print('done')

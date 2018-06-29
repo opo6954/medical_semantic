@@ -48,57 +48,6 @@ if __name__ == '__main__':
     main(FLAGS)
 
 
-'''
-# test train model with args
-
-from testTrainModel import train_SPHash
-
-import argparse
-
-
-# train_SPHash(inputType="Origin", bitSize=16, num_epochs=50)
-
-
-def main(args):
-    inputType = args.inputType
-    bitSize = args.bitSize
-    num_epochs = args.num_epochs
-
-    print('//////////////////////////////////////////////////////////////////////////////')
-    print('train condition for ' + inputType + '_' + str(bitSize) + '_' + str(num_epochs))
-    print('//////////////////////////////////////////////////////////////////////////////')
-
-    train_SPHash(inputType=inputType, bitSize=bitSize, num_epochs=num_epochs)
-
-if __name__ == '__main__':
-  parser = argparse.ArgumentParser()
-
-  parser.add_argument(
-      '--inputType',
-      type=str,
-      help='Input type for training(Origin, Activated, Cropped)',
-      required=True)
-  parser.add_argument(
-      '--bitSize',
-      type=int,
-      help='Bit Size(16, 32, 48)',
-      required=True)
-  parser.add_argument(
-      '--num_epochs',
-      type=int,
-      help='Number of epochs',
-      required = True)
-
-  FLAGS, unparsed = parser.parse_known_args()
-
-  main(FLAGS)
-
-
-
-
-# train_SPHash(inputType="Origin", bitSize=16, num_epochs=50)
-'''
-
 epochNumber = 26
 epochOriginNumber = 96
 
