@@ -5,6 +5,6 @@ largeData/modelAlexnet/
 largeData/data_png
 .idea/
 *.pyc
-
+*.sh
 
 
