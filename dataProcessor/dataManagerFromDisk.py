@@ -18,8 +18,6 @@ class DataManagerFromDisk:
         return len(self.imgNLabelList)
 
     def loadLabel(self):
-
-
         with open(self.labelFilePath) as readFile:
             allLabel = readFile.readlines()
 

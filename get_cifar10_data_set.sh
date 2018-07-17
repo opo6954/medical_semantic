@@ -3,7 +3,7 @@ file="largeData/cifar10/cifar10.meta"
 
 if [ -f "$file" ]
 then
-	echo "cifar10 data found, no downloading..."
+	echo "cifar10 data found, no downloading...."
 else
 	echo "cifar10 data not found, start downloading"
 	mkdir ./largeData/cifar10
